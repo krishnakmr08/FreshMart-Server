@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 // Base user schema
 const userSchema = {
-  name: { type: String },
+  name: String,
   isActivated: { type: Boolean, default: false },
 };
 
