@@ -10,7 +10,10 @@ const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);
 
-    const app = fastify();
+    const app = fastify({
+      trustProxy: true,
+      logger: true,
+    });
 
     app.register(fastifySocketIO, {
       cors: { origin: "*" },

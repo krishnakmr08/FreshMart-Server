@@ -3,7 +3,7 @@ import AdminJSFastify from "@adminjs/fastify";
 import * as AdminJSMongoose from "@adminjs/mongoose";
 import { dark, light, noSidebar } from "@adminjs/themes";
 import * as Models from "../models/index.js";
-import { authenticate, COOKIE_PASSWORD, sessionStore } from "./config.js";
+import { authenticate, COOKIE_PASSWORD } from "./config.js";
 
 AdminJS.registerAdapter(AdminJSMongoose);
 
@@ -58,10 +58,6 @@ export const buildAdminRouter = async (app) => {
     },
     app,
     {
-      store: sessionStore,
-      secret: COOKIE_PASSWORD,
-      resave: false,
-      saveUninitialized: false,
       cookie: {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
