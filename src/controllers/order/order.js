@@ -52,7 +52,7 @@ export const createOrder = async (req, reply) => {
 
     const savedOrder = await order.save();
 
-    await savedOrder.populate(["items.id", "items.item"]);
+    await savedOrder.populate("items.item");
 
     return reply.code(201).send(savedOrder);
   } catch (error) {
