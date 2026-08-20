@@ -1,0 +1,28 @@
+{
+  "name": "freshmart-server",
+  "version": "1.0.0",
+  "description": "FreshMart Server is a production-ready Fastify backend for a real-time grocery delivery application, featuring MongoDB, JWT authentication, Socket.IO real-time communication, and an AdminJS dashboard.",
+  "license": "ISC",
+  "author": "Krishna kumar",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed": "node seedScript.js"
+  },
+  "dependencies": {
+    "@adminjs/fastify": "4.1.0",
+    "@adminjs/mongoose": "^4.1.0",
+    "@adminjs/themes": "^1.0.1",
+    "adminjs": "^7.8.17",
+    "dotenv": "^17.4.2",
+    "fastify": "4.29.1",
+    "fastify-socket.io": "5.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.24.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
